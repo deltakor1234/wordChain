@@ -3,7 +3,9 @@ let wc = {
     var link = "https://api.zz.am/word/"+word
     var doc = org.jsoup.Jsoup.connect(link)
     doc = doc.get()
-    return doc
+    var res = doc.select("body").text()
+    res = res.han
+    return res
   }
 }
 
