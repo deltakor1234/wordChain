@@ -4,7 +4,7 @@ let wc = {
     var doc = org.jsoup.Jsoup.connect(link)
     doc = doc.get()
     var res = doc.select("body").text()
-    res = res.han
+    res = JSON.parse(res).han
     return res
   }
 }
